@@ -1,0 +1,483 @@
+on:
+  workflow_call:
+    inputs:
+      name:
+        required: true
+        type: string
+      os:
+        required: true
+        type: string
+      os_image:
+        required: true
+        type: string
+      deps_cmdline:
+        required: true
+        type: string
+      build_opts:
+        required: true
+        type: string
+      extra_files:
+        required: true
+        type: string
+        # s[n]   = output file
+        # s[n+1] = resource sha256
+        # s[n+2] = resource url
+      build_type:
+        required: true
+        type: string
+      environment:
+        required: true
+        type: string
+    secrets:
+      GPG_PRIVATE_KEY:
+        required: false
+      MACOS_CERTIFICATE:
+        required: false
+      MACOS_CERTIFICATE_PASSWORD:
+        required: false
+      MACOS_CERTIFICATE_ID:
+        required: false
+
+jobs:
+  run_build:
+    name: ${{ inputs.name }} ${{ inputs.build_type }}
+    runs-on: ${{ inputs.os }}
+    environment: ${{ inputs.environment != '' && 'production' || '' }}
+    container:
+      image: ${{ inputs.os_image }}
+      options: --device /dev/fuse --cap-add SYS_ADMIN --security-opt apparmor:unconfined
+    defaults:
+      run:
+        shell: ${{ contains(inputs.name, 'MinGW') && 'msys2 {0}' || 'bash' }}
+
+    steps:
+    - name: Dump Event
+      shell: bash
+      env:
+        EVENT: ${{ toJson(github) }}
+      run: echo "${EVENT}"
+
+    - name: Prepare Container
+      if: runner.os == 'Linux'
+      run: |
+        # Containers are lean and may not have packages required by early steps
+        elevated() { if [ "$EUID" -ne 0 ]; then sudo "$@"; else "$@"; fi; }
+
+        if which apt-get; then
+          elevated apt-get -q update
+          elevated apt-get -q install -y curl file git gh jq python3 sudo tree
+        fi
+        # fixed dubious ownership issue in a container
+        git config --global --add safe.directory $GITHUB_WORKSPACE
+
+    # https://github.com/actions/runner-images/issues/14083
+    - name: Install Winget
+      if: inputs.os == 'windows-11-arm'
+      shell: pwsh
+      run: |
+        Install-Module -Name Microsoft.WinGet.Client -Repository PSGallery -Force
+        Repair-WinGetPackageManager -Latest -Force
+        Write-Output "Winget Version: $(winget --version)"
+        "C:\Users\runneradmin\AppData\Local\Microsoft\WinGet\Links" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+
+    - name: Checkout
+      uses: actions/checkout@v6
+      with:
+        fetch-depth: 0
+
+    - name: Get Cache Ref
+      id: key
+      shell: bash
+      run: |
+        ref=${{ github.base_ref || github.ref }}
+        main=${{ github.event.repository.master_branch || 'trunk' }}
+        suffix="${{ inputs.name }}/${{ inputs.build_type }}"
+        echo "ref: $ref"
+        if [[ -z "${ref}" || "${ref}" == refs/* ]]; then
+          refs=( $(git branch -r --contains ${{ github.sha }} | grep -v 'HEAD' | grep origin/ | sed 's/^[[:space:]]*origin\///' ) )
+          count=${#refs[@]}
+          if [[ ${count} == 0 ]]; then
+            ref=${main}
+          elif [[ ${count} == 1 ]]; then
+            ref=${refs[0]}
+          else
+            for ((i=0; i<count; i++)); do
+              if [[ ${refs[i]} == ${main} ]]; then break; fi
+            done
+            if [[ ! ${i} < ${count} ]]; then i=0; fi
+            ref=${refs[i]}
+          fi
+        fi
+        function key() { echo "$1=$2/${suffix// /_}" | tee -a "$GITHUB_OUTPUT" ; }
+        key primary $ref
+        key secondary $main
+
+    - name: Restore Cache
+      if:
+      id: cache
+      uses: actions/cache/restore@v5
+      with:
+        path: .cache
+        key: ${{ steps.key.outputs.primary }}
+        restore-keys: ${{ steps.key.outputs.secondary }}
+
+    - name: Test Cache
+      id: cached
+      shell: bash
+      run: |
+        if [[ "${{ steps.cache.conclusion }}" == "skipped" ]]; then
+          status=skipped
+        elif [[ ${{github.run_attempt}} != 1 ]]; then
+          status=dropped
+        elif [[ -z "${{ steps.cache.outputs.cache-hit }}" ]]; then
+          status=missing
+        else
+          status=okay
+        fi
+        echo "status=${status}" | tee -a "$GITHUB_OUTPUT"
+        if [[ "${status}" != "okay" ]]; then
+          echo "Clearing cache"
+          rm -rf .cache
+        fi
+        # use this condition to enable saving cache
+
+        # TODO: add override for the ref_name check
+        if [[ "${status}" != 'skipped' && "${{github.event_name}}" != 'pull_request' \
+          && "${{github.ref_name}}" == "${{github.event.repository.default_branch}}" && "${{github.ref_type}}" == 'branch' ]]; then
+          echo "save=yes" | tee -a "$GITHUB_OUTPUT"
+          if [[ "${status}" != 'missing' && \
+          "${{steps.cache.outputs.cache-primary-key}}" == "${{steps.cache.outputs.cache-matched-key}}" ]]; then
+            echo "clear=yes" | tee -a "$GITHUB_OUTPUT"
+          fi
+        fi
+
+    - name: Setup MSVC
+      if: runner.os == 'Windows' && !contains(inputs.name, 'MinGW')
+      uses: ilammy/msvc-dev-cmd@v1 # FIXME: update this
+
+    - name: Setup MSYS2
+      if: runner.os == 'Windows' && contains(inputs.name, 'MinGW')
+      uses: msys2/setup-msys2@v2
+      with:
+        msystem: MINGW64
+        update: true
+
+    - name: Dependencies
+      env:
+        DEPS_COMMAND: ${{ inputs.deps_cmdline }}
+        EXTRA_FILES: ${{ inputs.extra_files }}
+      run: |
+        mkdir -p build
+        mkdir -p .cache/files && cd .cache/files
+
+        attempt() (
+          set +e
+          local cmd="$*"
+          local delay=10
+          for i in {1..4}; do
+            echo "Running: $cmd"
+            bash -c "$cmd" &
+            local cmd_pid=$!
+
+            ( sleep 1200 ; kill -9 "$cmd_pid" 2>&1 ; ) &
+            local watchdog_pid=$!
+
+            wait "$cmd_pid" 2>&1
+            local exit_code=$?
+
+            kill "$watchdog_pid" 2>&1
+            wait "$watchdog_pid" 2>&1
+
+            [ $exit_code -eq 0 ] && return 0
+            echo "::notice ::Attempt $i failed. Retrying in ${delay}s" >&2
+            sleep "${delay}"
+            ((delay*=3))
+          done
+          return 1
+        )
+
+        echo ::group::Files
+        files=( $EXTRA_FILES )
+        for ((i=2;i<=${#files[@]};i+=3)); do
+          file="${files[i-2]}"
+          hash="${files[i-1]}"
+          addr="${files[i]}"
+          download="curl -fL '${addr}' | tee '${file}' | sha256sum"
+          if [[ "${hash}" == '-' ]]; then
+            echo "::warning ::Skipping Checksum for ${file}"
+            verify="true"
+          else
+            verify="echo '${hash} ${file}' | sha256sum -c -"
+            if [ -f "$file" ]; then
+              printf 'found: %s\n' "$(sha256sum "${file}")"
+              if $verify ; then
+                echo Skipping
+                continue
+              else
+                echo Downloading
+                rm "${file}"
+              fi
+            fi
+          fi
+          attempt "set -o pipefail; { $download ; } && { $verify ; }"
+        done
+        echo ::endgroup::
+
+        echo ::group::Command
+        command=( $DEPS_COMMAND )
+        command="${command[*]}"
+        if [[ -n "$command" ]]; then
+          attempt "$command"
+        fi
+        echo ::endgroup::
+
+        echo ::group::List
+        shopt -s nullglob
+        cp * ../../build || true
+        cd ../..
+        git status || true
+        find build -ls || true
+        echo ::endgroup::
+
+    - name: Build
+      env:
+        BUILD_TYPE: ${{ inputs.build_type }}
+        BUILD_OPTS: ${{ inputs.build_opts }}
+      run: |
+        echo ::group::Cache Inspect
+        export CCACHE_COMPRESSLEVEL=5
+        export CCACHE_DIR="$PWD/.cache/ccache"
+        ccache -v
+        ccache -s
+        ccache -p
+        SECONDS=0
+        echo ::endgroup::
+
+        echo ::group::Configure
+        cmake \
+          -B build \
+          -S . \
+          -G Ninja \
+          -D PK3_QUIET_ZIPDIR=ON \
+          -D CMAKE_C_COMPILER_LAUNCHER=ccache \
+          -D CMAKE_CXX_COMPILER_LAUNCHER=ccache \
+          -D USE_PCH=OFF \
+          -D CMAKE_BUILD_TYPE=$BUILD_TYPE \
+          $BUILD_OPTS
+        echo ::endgroup::
+
+        echo ::group::Configure Inspect
+        cat build/CMakeCache.txt | grep -Ev '^$|^[#/]'
+        echo ::endgroup::
+
+        echo ::group::Build
+        cmake --build build --config $BUILD_TYPE
+        echo ::endgroup::
+
+        echo ::group::Cache Stats
+        ccache --evict-older-than $((SECONDS+10))s
+        ccache -s
+        echo ::endgroup::
+
+    - name: Pre Package
+      id: package
+      shell: bash
+      working-directory: build
+      run: |
+        mkdir package
+        7z a package/licenses.zip ../docs/licenses/*
+
+        echo "name=${{ runner.os }}-$(uname -m)-UZDoom-$(git describe --tags --exclude x-*)" | tee -a "$GITHUB_OUTPUT"
+
+    - name: Package Windows
+      if: runner.os == 'Windows'
+      shell: bash
+      working-directory: build
+      env:
+        NAME: ${{ steps.package.outputs.name }}
+      run: |
+        function unzip_to_package() {
+          if [[ ! -f "$1" ]]; then
+            echo "skipping $1"
+            return
+          fi
+          f=$(unzip -l "$1" | awk -v pattern="$2" '$0 ~ pattern {print $NF; exit}')
+          echo "$1: $f"
+          unzip -j "$1" "$f" -d package
+        }
+        unzip_to_package oalsoft.zip 'bin/Win64/soft_oal.dll$'
+        unzip_to_package sndfile.zip 'bin/sndfile.dll$'
+        unzip_to_package libcurl.zip 'bin/libcurl.*.dll$'
+
+        rm -rf soundfonts fm_banks
+
+        mkdir -p package/soundfonts
+        cp -f ../soundfont/uzdoom.sf2 package/soundfonts
+
+        mkdir -p package/fm_banks
+        cp -f ../fm_banks/GENMIDI.GS.wopl ../fm_banks/gs-by-papiezak-and-sneakernets.wopn package/fm_banks
+
+        shopt -s nullglob
+        mv -f *.exe *.pk3 *.pdb package
+
+        cd package
+        7z a -sdel -r "${NAME}.zip" *
+        cd ..
+
+    - name: Package macOS
+      if: runner.os == 'macOS'
+      shell: bash
+      working-directory: build
+      env:
+        NAME: ${{ steps.package.outputs.name }}
+      run: |
+        if [[ ! -d uzdoom.app ]] && [[ -d ${{ inputs.build_type }}/uzdoom.app ]]; then
+          mv ${{ inputs.build_type }}/uzdoom.app uzdoom.app
+        fi
+
+        app=UZDoom.app
+        mv uzdoom.app ${app}
+        mv package/licenses.zip ${app}/Contents/Resources
+
+        if dsymutil ${app}/Contents/MacOS/uzdoom; then
+          mv ${app}/Contents/MacOS/uzdoom.dSYM ${app}/Contents/Resources/
+        fi
+
+        SIGN_ID="-"
+        SIGN_OPTS=""
+
+        if [[ -n "${{ secrets.MACOS_CERTIFICATE }}" ]]; then
+          echo "${{ secrets.MACOS_CERTIFICATE }}" | base64 --decode > certificate.p12
+          security create-keychain -p "" build.keychain
+          security default-keychain -s build.keychain
+          security unlock-keychain -p "" build.keychain
+          security import certificate.p12 -k build.keychain -P "${{ secrets.MACOS_CERTIFICATE_PASSWORD }}" -T /usr/bin/codesign
+          security set-key-partition-list -S apple-tool:,apple: -s -k "" build.keychain
+
+          SIGN_ID="${{ secrets.MACOS_CERTIFICATE_ID }}"
+          SIGN_OPTS="--options=runtime"
+        else
+          echo "::warning ::Self-signing application"
+        fi
+
+        mkdir -p ${app}/Contents/Frameworks
+        cp -L $(brew --prefix sdl3)/lib/libSDL3.dylib ${app}/Contents/Frameworks/libSDL3.dylib
+        cp $(brew --prefix molten-vk)/lib/libMoltenVK.dylib ${app}/Contents/Frameworks/
+        dylibbundler -ns -of -cd -b \
+          -x ./${app}/Contents/MacOS/uzdoom \
+          -d ./${app}/Contents/Frameworks \
+          -p @executable_path/../Frameworks/
+
+        xattr -cr ${app}
+
+        find ${app}/Contents/Frameworks -type f -name "*.dylib" -print0 | while IFS= read -r -d '' file; do
+          codesign --remove-signature "$file"
+          codesign --force $SIGN_OPTS -s "$SIGN_ID" "$file"
+        done
+
+        /usr/bin/codesign --force --deep $SIGN_OPTS -s "$SIGN_ID" ${app} -v
+
+        $(brew --prefix python)/bin/python3 -m venv venv
+        source venv/bin/activate
+        pip install dmgbuild
+        dmgbuild -s ../tools/dmgbuild-settings.py -D app=${app} "UZDoom" UZDoom.dmg
+        mv UZDoom.dmg package
+
+        cd ..
+
+    - name: Package Linux
+      if: runner.os == 'Linux'
+      shell: bash
+      working-directory: build
+      env:
+        NAME: ${{ steps.package.outputs.name }}
+        OWNER: ${{ github.repository_owner }}
+        REPO: ${{ github.event.repository.name }}
+        TAG: ${{ inputs.environment == 'stable' && 'latest' || 'latest-pre' }}
+      run: |
+        ldd uzdoom
+
+        appdir=AppDir
+        pfx=$(realpath $appdir)/usr
+        arch=$(uname -m)
+        mkdir $appdir
+
+        cmake --install . --prefix "${pfx}"
+
+        # this is actually in the correct place, but the appimage linter complains
+        # copying it for now, just in case some tooling wants it there
+        mv "${pfx}/share/metainfo/org.zdoom.UZDoom.metainfo.xml" "${pfx}/share/metainfo/org.zdoom.UZDoom.appdata.xml"
+
+        # cleanup
+        {
+          find "${pfx}" -type f \( -iname \*.a -o -iname \*.h -o -iname \*.cmake \) -print -delete
+          find "${pfx}" -type d -empty -delete -print
+        } | xargs printf 'deleting: %s\n'
+
+        # https://github.com/linuxdeploy/linuxdeploy-plugin-appimage
+        export LDAI_UPDATE_INFORMATION="gh-releases-zsync|${OWNER}|${REPO}|${TAG}|Linux-UZDoom-*-${arch}.AppImage.zsync"
+        export LDAI_RUNTIME_FILE=./appimage-runtime
+
+        # our metainfo file is correct, but for some reason the checker crashes on it
+        export LDAI_NO_APPSTREAM=1
+
+        if [[ -n "${{ secrets.GPG_PRIVATE_KEY }}" ]]; then
+          export LDAI_SIGN=1
+          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --import
+        else
+          echo "::warning ::Not signing"
+        fi
+
+        function library() { ldconfig -p | grep -F $1 | head -1 | awk '{print $NF}' ; }
+
+        chmod +x linuxdeploy
+        ./linuxdeploy --output appimage \
+          --appdir $appdir \
+          --executable="${pfx}/bin/uzdoom" \
+          --desktop-file="${pfx}/share/applications/org.zdoom.UZDoom.desktop" \
+          --library "$(library libopenal.so.)" \
+          --icon-file="${pfx}/share/icons/hicolor/scalable/apps/org.zdoom.UZDoom.svg"
+
+        mv *.AppImage "package/${NAME}.AppImage"
+        mv *.zsync "package/${NAME}.AppImage.zsync"
+
+        rm package/licenses.zip
+
+    - name: List
+      if: always()
+      shell: bash
+      run: |
+        git status || true
+        find build -ls || true
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v7
+      with:
+        path: build/package
+        name: ${{ inputs.name }} ${{ inputs.build_type }}
+
+    - name: Prepare Cache
+      if: steps.cached.outputs.save == 'yes'
+      env:
+        GH_TOKEN: ${{ github.token }}
+        REPO: ${{ github.repository }}
+        KEY: ${{steps.cache.outputs.cache-primary-key}}
+      shell: bash
+      run: |
+        # https://github.com/actions/cache/issues/342
+        if [[ "${{ steps.cached.outputs.clear }}" == 'yes' ]]; then
+          echo ::group::Delete-Remote
+          if ! err=$(gh api --method DELETE "/repos/${REPO}/actions/caches?key=${KEY}"); then
+            echo "$err" >&2
+            echo "::warning ::$(jq -r .message <<<$err)"
+          fi
+          sleep 5
+          echo ::endgroup::
+        fi
+
+    - name: Save Cache
+      if: steps.cached.outputs.save == 'yes'
+      uses: actions/cache/save@v5
+      with:
+        path: .cache
+        key: ${{steps.cache.outputs.cache-primary-key}}

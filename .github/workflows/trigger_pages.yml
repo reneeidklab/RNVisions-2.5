@@ -1,0 +1,24 @@
+name: Trigger Pages
+
+on:
+  push:
+    branches:
+      - trunk
+    tags:
+      - '**'
+
+permissions:
+  actions: write
+
+jobs:
+  trigger_pages:
+    if: ${{ vars.PUBLISH_PAGES }}
+    runs-on: ubuntu-latest
+    name: Trigger a Pages deployment
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - run: gh workflow run pages_deploy.yml --ref trunk

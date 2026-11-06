@@ -1,0 +1,1826 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-09-10 04:51+0000\n"
+"Last-Translator: TBinhfkl <anhthieufame2021@gmail.com>\n"
+"Language-Team: Vietnamese <https://hosted.weblate.org/projects/uzdoom/common/vi/>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2026.9.1\n"
+
+msgid "PRESSYN"
+msgstr "Ấn Y hoặc N."
+
+msgid "TXT_YES"
+msgstr "Yes"
+
+msgid "TXT_NO"
+msgstr "Không"
+
+msgid "SAVEDEAD"
+msgstr ""
+"Bạn không thể lưu lại nếu không chơi!\n"
+"\n"
+"Ấn một phím."
+
+msgid "SAFEMESSAGE"
+msgstr "Bạn có thực sự muốn làm điều này không?"
+
+msgid "QSPROMPT"
+msgstr ""
+"Lưu nhanh đè lên trò chơi có tên\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Ấn Y hoặc N."
+
+msgid "QLPROMPT"
+msgstr ""
+"Vào nhanh đè lên trò chơi có tên\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Ấn Y hoặc N."
+
+msgid "TXT_X_CHEATS"
+msgstr ""
+
+msgid "TXT_SAY"
+msgstr "Nói:"
+
+msgid "TXT_QUITENDOOM"
+msgstr "Ấn phím bất kỳ hoặc nhấp chuột vào bất kỳ đâu trong cửa sổ để thoát."
+
+msgid "NEWSAVE"
+msgstr "<Lưu trò chơi mới>"
+
+msgid "GGSAVED"
+msgstr "Đã lưu trò chơi."
+
+msgid "SAVECOMMENT_TIME"
+msgstr "Thời gian"
+
+msgid "MNU_LOADGAME"
+msgstr "Vào Game"
+
+msgid "MNU_SAVEGAME"
+msgstr "Lưu Game"
+
+msgid "MNU_NOPICTURE"
+msgstr "Không có hình ảnh"
+
+msgid "MNU_DIFFVERSION"
+msgstr "Phiên bản khác"
+
+msgid "MNU_NOFILES"
+msgstr "Không có tệp nào"
+
+msgid "MNU_DELETESG"
+msgstr "Bạn thực sự muốn xóa file lưu game này sao?"
+
+msgid "OPTVAL_OFF"
+msgstr "Tắt"
+
+msgid "OPTVAL_ON"
+msgstr "Bật"
+
+msgid "OPTVAL_AUTO"
+msgstr "Tự động"
+
+msgid "OPTMNU_TITLE"
+msgstr "Tùy chọn"
+
+msgid "OPTMNU_CONTROLS"
+msgstr "Tùy chỉnh điều khiển"
+
+msgid "OPTMNU_MOUSE"
+msgstr "Tùy chọn chuột"
+
+msgid "OPTMNU_JOYSTICK"
+msgstr "Tùy chọn bộ điều khiển"
+
+msgid "OPTMNU_PLAYER"
+msgstr "Thiết lập người chơi"
+
+msgid "OPTMNU_GAMEPLAY"
+msgstr "Tùy chọn lối chơi"
+
+msgid "OPTMNU_AUTOMAP"
+msgstr "Tùy chọn Automap"
+
+msgid "OPTMNU_HUD"
+msgstr "Tùy chọn HUD"
+
+msgid "OPTMNU_MISCELLANEOUS"
+msgstr "Các tùy chọn khác"
+
+msgid "OPTMNU_SOUND"
+msgstr "Tùy chọn âm thanh"
+
+msgid "ACCMNU_TITLE"
+msgstr "Tùy chọn trợ năng"
+
+msgid "OPTMNU_DISPLAY"
+msgstr "Tùy chọn hiển thị"
+
+msgid "OPTMNU_VIDEO"
+msgstr "Đặt chế độ video"
+
+msgid "OPTMNU_DEFAULTS"
+msgstr "Khôi phục về cài đặt mặc định"
+
+msgid "OPTMNU_RESETTOSAVED"
+msgstr "Khôi phục về lần lưu cuối cùng"
+
+msgid "OPTMNU_WRITEINI"
+msgstr "Lưu cài đặt hiện tại"
+
+msgid "OPTMNU_CONSOLE"
+msgstr "Đi tới bảng điều khiển"
+
+msgid "OPTMNU_NETWORK"
+msgstr "Tùy chọn mạng"
+
+msgid "OPTMNU_REVERB"
+msgstr "Trình chỉnh sửa môi trường Reverb"
+
+msgid "CNTRLMNU_SWITCHTEXT1"
+msgstr "ENTER để thay đổi, BACKSPACE để xóa"
+
+msgid "CNTRLMNU_SWITCHTEXT2"
+msgstr "Nhấn phím mới để điều khiển, ESC để hủy."
+
+msgid "CNTRLMNU_CONTROLS"
+msgstr "Điều khiển"
+
+msgid "CNTRLMNU_ATTACK"
+msgstr "Bắn"
+
+msgid "CNTRLMNU_ALTATTACK"
+msgstr "Thứ cấp bắn"
+
+msgid "CNTRLMNU_RELOAD"
+msgstr "Vũ khí nạp đạn"
+
+msgid "CNTRLMNU_USE"
+msgstr "Sử dụng / Mở"
+
+msgid "CNTRLMNU_FORWARD"
+msgstr "Di chuyển phía trước"
+
+msgid "CNTRLMNU_BACK"
+msgstr "Di chuyển lùi lại"
+
+msgid "CNTRLMNU_MOVELEFT"
+msgstr "Di chuyển sang trái"
+
+msgid "CNTRLMNU_MOVERIGHT"
+msgstr "Di chuyển sang phải"
+
+msgid "CNTRLMNU_TURNLEFT"
+msgstr "Rẽ trái"
+
+msgid "CNTRLMNU_TURNRIGHT"
+msgstr "Rẽ phải"
+
+msgid "CNTRLMNU_TURN180"
+msgstr "Xoay Nhanh"
+
+msgid "CNTRLMNU_JUMP"
+msgstr "Nhảy"
+
+msgid "CNTRLMNU_CROUCH"
+msgstr "Ngồi"
+
+msgid "CNTRLMNU_TOGGLECROUCH"
+msgstr "Bật/Tắt ngồi"
+
+msgid "CNTRLMNU_MOUSELOOK"
+msgstr "Chuột nhìn"
+
+msgid "CNTRLMNU_LOOKUP"
+msgstr "Nhìn lên"
+
+msgid "CNTRLMNU_LOOKDOWN"
+msgstr "Nhìn xuống"
+
+msgid "CNTRLMNU_CENTERVIEW"
+msgstr "Góc nhìn chính giữa"
+
+msgid "CNTRLMNU_RUN"
+msgstr "Chạy"
+
+msgid "CNTRLMNU_TOGGLERUN"
+msgstr "Bật/tắt chạy"
+
+msgid "CNTRLMNU_STRAFE"
+msgstr "Di chuyển ngang"
+
+msgid "CNTRLMNU_SCOREBOARD"
+msgstr "Hiển thị bảng điểm"
+
+msgid "CNTRLMNU_ACTION"
+msgstr "Hoạt động"
+
+msgid "CNTRLMNU_ACTION_TITLE"
+msgstr "Tùy chỉnh các điều khiển hành động"
+
+msgid "MNU_MULTIPLAYER"
+msgstr "Nhiều người chơi"
+
+msgid "CNTRLMNU_SAY"
+msgstr "Nói"
+
+msgid "CNTRLMNU_WEAPONS_TITLE"
+msgstr "Tùy chỉnh điều khiển vũ khí"
+
+msgid "CNTRLMNU_INVENTORY_TITLE"
+msgstr "Tùy chỉnh kiểm soát hàng tồn kho"
+
+msgid "CNTRLMNU_OTHER_TITLE"
+msgstr "Tùy chỉnh các điều khiển khác"
+
+msgid "CNTRLMNU_WEAPONS"
+msgstr "Vũ khí"
+
+msgid "CNTRLMNU_NEXTWEAPON"
+msgstr "Vũ khí tiếp theo"
+
+msgid "CNTRLMNU_PREVIOUSWEAPON"
+msgstr "Vũ khí trước đó"
+
+msgid "CNTRLMNU_SLOT1"
+msgstr "Vũ khí 1"
+
+msgid "CNTRLMNU_SLOT2"
+msgstr "Vũ khí 2"
+
+msgid "CNTRLMNU_SLOT3"
+msgstr "Vũ khí 3"
+
+msgid "CNTRLMNU_SLOT4"
+msgstr "Vũ khí 4"
+
+msgid "CNTRLMNU_SLOT5"
+msgstr "Vũ khí 5"
+
+msgid "CNTRLMNU_SLOT6"
+msgstr "Vũ khí 6"
+
+msgid "CNTRLMNU_SLOT7"
+msgstr "Vũ khí 7"
+
+msgid "CNTRLMNU_SLOT8"
+msgstr "Vũ khí 8"
+
+msgid "CNTRLMNU_SLOT9"
+msgstr "Vũ khí 9"
+
+msgid "CNTRLMNU_SLOT0"
+msgstr "Vũ khí 10"
+
+msgid "CNTRLMNU_INVENTORY"
+msgstr "Hàng tồn kho"
+
+msgid "CNTRLMNU_USEITEM"
+msgstr "Kích hoạt mục"
+
+msgid "CNTRLMNU_USEALLITEMS"
+msgstr "Kích hoạt tất cả các mục"
+
+msgid "CNTRLMNU_NEXTITEM"
+msgstr "Mục tiếp theo"
+
+msgid "CNTRLMNU_PREVIOUSITEM"
+msgstr "Mục trước"
+
+msgid "MAPCNTRLMNU_TITLE"
+msgstr "Điều khiển bản đồ"
+
+msgid "MAPCNTRLMNU_CONTROLS"
+msgstr "Điều khiển bản đồ"
+
+msgid "MAPCNTRLMNU_PANLEFT"
+msgstr "Lia trái"
+
+msgid "MAPCNTRLMNU_PANRIGHT"
+msgstr "Lia phải"
+
+msgid "MAPCNTRLMNU_PANUP"
+msgstr "Lia lên"
+
+msgid "MAPCNTRLMNU_PANDOWN"
+msgstr "Lia xuống"
+
+msgid "MAPCNTRLMNU_ZOOMIN"
+msgstr "Phóng to"
+
+msgid "MAPCNTRLMNU_ZOOMOUT"
+msgstr "Phóng nhỏ"
+
+msgid "MAPCNTRLMNU_TOGGLEZOOM"
+msgstr "Bật/tắt phóng"
+
+msgid "MAPCNTRLMNU_TOGGLEFOLLOW"
+msgstr "Bật/tắt theo dõi"
+
+msgid "MAPCNTRLMNU_TOGGLEGRID"
+msgstr "Bật/tắt lưới"
+
+msgid "MAPCNTRLMNU_ROTATE"
+msgstr "Bật/tắt xoay"
+
+msgid "MAPCNTRLMNU_TOGGLETEXTURE"
+msgstr "Bật/tắt kết cấu"
+
+msgid "CNTRLMNU_AUTOMAP"
+msgstr "Bật/tắt automap"
+
+msgid "CNTRLMNU_CHASECAM"
+msgstr ""
+
+msgid "CNTRLMNU_SCREENSHOT"
+msgstr "Ảnh chụp màn hình"
+
+msgid "CNTRLMNU_PAUSE"
+msgstr "Tạm dừng"
+
+msgid "CNTRLMNU_DISPLAY_INC"
+msgstr "Tăng kích thước hiển thị"
+
+msgid "CNTRLMNU_DISPLAY_DEC"
+msgstr "Giảm kích thước hiển thị"
+
+msgid "CNTRLMNU_OPEN_HELP"
+msgstr "Trợ giúp mở"
+
+msgid "CNTRLMNU_OPEN_SAVE"
+msgstr "Mở menu Lưu"
+
+msgid "CNTRLMNU_OPEN_LOAD"
+msgstr "Mở menu vào"
+
+msgid "CNTRLMNU_OPEN_OPTIONS"
+msgstr "Open Options Menu"
+
+msgid "CNTRLMNU_OPEN_DISPLAY"
+msgstr "Mở Menu Hiển thị"
+
+msgid "CNTRLMNU_QUICKSAVE"
+msgstr "Lưu nhanh"
+
+msgid "CNTRLMNU_QUICKLOAD"
+msgstr "Vào nhanh"
+
+msgid "CNTRLMNU_EXIT_TO_MAIN"
+msgstr "Thoát về Menu chính"
+
+msgid "CNTRLMNU_TOGGLE_MESSAGES"
+msgstr "Thông báo bật/tắt"
+
+msgid "CNTRLMNU_MENU_QUIT"
+msgstr "Thoát Game"
+
+msgid "MOUSEMNU_ENABLEMOUSE"
+msgstr "Bật chuột"
+
+msgid "MOUSEMNU_MOUSEINMENU"
+msgstr "Bật chuột ở menu"
+
+msgid "MOUSEMNU_SHOWBACKBUTTON"
+msgstr "Hiển thị nút quay lại"
+
+msgid "MOUSEMNU_CURSOR"
+msgstr "Con trỏ"
+
+msgid "MOUSEMNU_SENSITIVITY_X"
+msgstr "Độ nhạy ngang"
+
+msgid "MOUSEMNU_SENSITIVITY_Y"
+msgstr "Độ nhạy dọc"
+
+msgid "MOUSEMNU_SMOOTHMOUSE"
+msgstr "Chuyển động chuột mượt mà"
+
+msgid "MOUSEMNU_TURNSPEED"
+msgstr "Tốc độ rẽ"
+
+msgid "MOUSEMNU_MOUSELOOKSPEED"
+msgstr "Tốc độ nhìn chuột"
+
+msgid "MOUSEMNU_FORWBACKSPEED"
+msgstr "Tốc độ tiến/lùi"
+
+msgid "MOUSEMNU_STRAFESPEED"
+msgstr "Tốc độ di chuyển ngang"
+
+msgid "MOUSEMNU_ALWAYSMOUSELOOK"
+msgstr "Luôn luôn nhìn bằng chuột"
+
+msgid "MOUSEMNU_INVERTMOUSE"
+msgstr "Đảo ngược Chuột Y"
+
+msgid "MOUSEMNU_INVERTMOUSEX"
+msgstr "Đảo ngược Chuột X"
+
+msgid "OPTVAL_UPPERLEFT"
+msgstr "Phía trên bên trái"
+
+msgid "OPTVAL_UPPERRIGHT"
+msgstr "Phía trên bên phải"
+
+msgid "OPTVAL_LOWERLEFT"
+msgstr "Phía dưới bên trái"
+
+msgid "OPTVAL_LOWERRIGHT"
+msgstr "Phía dưới bên phải"
+
+msgid "OPTVAL_TOUCHSCREENLIKE"
+msgstr "Giống màn hình cảm ứng"
+
+msgid "OPTSTR_SIMPLEARROW"
+msgstr "Mũi tên đơn giản"
+
+msgid "OPTSTR_SYSTEMCURSOR"
+msgstr "Con trỏ hệ thống"
+
+msgid "OPTVAL_DEFAULT"
+msgstr "Mặc định"
+
+msgid "JOYMNU_TITLE"
+msgstr "Cấu hình bộ điều khiển"
+
+msgid "JOYMNU_OPTIONS"
+msgstr "Tùy chọn bộ điều khiển"
+
+msgid "JOYMNU_NOMENU"
+msgstr "Đầu vào bộ điều khiển khối trong menu"
+
+msgid "JOYMNU_ENABLE"
+msgstr "Bật hỗ trợ tay cầm"
+
+msgid "JOYMNU_DINPUT"
+msgstr "Bật bộ điều khiển DirectInput"
+
+msgid "JOYMNU_XINPUT"
+msgstr "Bật tay cầm XInput"
+
+msgid "JOYMNU_PS2"
+msgstr "Kích hoạt bộ điều hợp PlayStation 2 thô"
+
+msgid "JOYMNU_NOCON"
+msgstr "Không phát hiện thấy bộ điều khiển nào"
+
+msgid "JOYMNU_CONFIG"
+msgstr "Cấu hình bộ điều khiển:"
+
+msgid "JOYMNU_DISABLED1"
+msgstr "Hỗ trợ bộ điều khiển phải được"
+
+msgid "JOYMNU_DISABLED2"
+msgstr "kích hoạt để phát hiện bất kỳ"
+
+msgid "JOYMNU_INVALID"
+msgstr "Bộ điều khiển được chỉ định cho menu không hợp lệ"
+
+msgid "JOYMNU_OVRSENS"
+msgstr "Độ nhạy tổng thể"
+
+msgid "JOYMNU_AXIS"
+msgstr "Cấu hình trục"
+
+msgid "JOYMNU_INVERT"
+msgstr "Đảo ngược"
+
+msgid "JOYMNU_DEADZONE"
+msgstr "Vùng chết"
+
+msgid "JOYMNU_NOAXES"
+msgstr "Không có trục cấu hình"
+
+msgid "OPTVAL_NONE"
+msgstr "Không có"
+
+msgid "OPTVAL_TURNING"
+msgstr "Nhìn sang trái/phải"
+
+msgid "OPTVAL_LOOKINGUPDOWN"
+msgstr "Nhìn lên/xuống"
+
+msgid "OPTVAL_MOVINGFORWARD"
+msgstr "Tiến lên/Lùi lại"
+
+msgid "OPTVAL_STRAFING"
+msgstr "Di chuyển sang trái/phải"
+
+msgid "OPTVAL_MOVINGUPDOWN"
+msgstr "Di chuyển lên/xuống"
+
+msgid "OPTVAL_INVERTED"
+msgstr "Đảo ngược"
+
+msgid "OPTVAL_NOTINVERTED"
+msgstr "Không đảo ngược"
+
+msgid "TXT_COLOR_BLUE"
+msgstr "Màu xanh da trời"
+
+msgid "TXT_COLOR_RED"
+msgstr "Màu đỏ"
+
+msgid "TXT_COLOR_GREEN"
+msgstr "Màu xanh lá"
+
+msgid "TXT_COLOR_GRAY"
+msgstr "Màu xám"
+
+msgid "TXT_COLOR_DARKGRAY"
+msgstr "Màu xám đậm"
+
+msgid "TXT_COLOR_DARKGREEN"
+msgstr "Màu xanh đậm"
+
+msgid "TXT_COLOR_BROWN"
+msgstr "Màu nâu"
+
+msgid "TXT_COLOR_DARKBLUE"
+msgstr "Màu xanh dương đậm"
+
+msgid "TXT_COLOR_LIGHTRED"
+msgstr "Màu đỏ nhạt"
+
+msgid "TXT_COLOR_YELLOW"
+msgstr "Màu vàng"
+
+msgid "TXT_COLOR_PURPLE"
+msgstr "Màu tím"
+
+msgid "TXT_COLOR_DULLGREEN"
+msgstr "Màu ô liu"
+
+msgid "TXT_COLOR_BEIGE"
+msgstr "Màu be"
+
+msgid "TXT_COLOR_LIGHTBLUE"
+msgstr "Màu xanh nhạt"
+
+msgid "TXT_COLOR_LIGHTGRAY"
+msgstr "Màu xám nhạt"
+
+msgid "TXT_COLOR_LIGHTBROWN"
+msgstr "Màu nâu nhạt"
+
+msgid "TXT_COLOR_GOLD"
+msgstr "Vàng"
+
+msgid "TXT_COLOR_BRIGHTGREEN"
+msgstr "Xanh lá cây tươi"
+
+msgid "TXT_COLOR_RUST"
+msgstr "Rỉ sét"
+
+msgid "PLYRMNU_NAME"
+msgstr "Tên"
+
+msgid "PLYRMNU_TEAM"
+msgstr "Đội"
+
+msgid "PLYRMNU_PLAYERCOLOR"
+msgstr "Màu sắc"
+
+msgid "PLYRMNU_PLAYERGENDER"
+msgstr "Giới tính"
+
+msgid "OPTVAL_MALE"
+msgstr "Nam giới"
+
+msgid "OPTVAL_FEMALE"
+msgstr "Nữ giới"
+
+msgid "OPTVAL_NEUTRAL"
+msgstr "Trung lập"
+
+msgid "OPTVAL_OTHER"
+msgstr "Đồ vật"
+
+msgid "GMPLYMNU_TITLE"
+msgstr "Tùy chọn lối chơi"
+
+msgid "OPTVAL_ALWAYS"
+msgstr "Luôn luôn"
+
+msgid "OPTVAL_NEVER"
+msgstr "Không bao giờ"
+
+msgid "PLYRMNU_AUTOAIM"
+msgstr "Tự động ngắm"
+
+msgid "PLYRMNU_ALWAYSRUN"
+msgstr "Luôn luôn chạy"
+
+msgid "DSPLYMNU_SCREENSIZE"
+msgstr "Kích thước màn hình"
+
+msgid "DSPLYMNU_VSYNC"
+msgstr "Đồng bộ dọc"
+
+msgid "DSPLYMNU_MODELS"
+msgstr "Mô hình"
+
+msgid "MSGMNU_CENTERMESSAGES"
+msgstr "Căn giữa tin nhắn"
+
+msgid "MSGMNU_MESSAGEQUEUE"
+msgstr "Kích thước hàng đợi tin nhắn"
+
+msgid "MSGMNU_STACKIDENTICAL"
+msgstr "Xếp chồng các thông báo lặp lại"
+
+msgid "MSGMNU_PULSEMESSAGES"
+msgstr "Màn hình hiển thị thông báo nhấp nháy"
+
+msgid "MNU_COLORPICKER"
+msgstr "Chọn màu"
+
+msgid "AUTOMAPMNU_ROTATE"
+msgstr "Xoay automap"
+
+msgid "AUTOMAPMNU_FOLLOW"
+msgstr "Theo dõi người chơi"
+
+msgid "AUTOMAPMNU_LINEALPHA"
+msgstr "Dòng alpha"
+
+msgid "AUTOMAPMNU_LINETHICKNESS"
+msgstr "Độ dày đường kẻ"
+
+msgid "MAPCOLORMNU_TITLE"
+msgstr "Tùy chỉnh màu sắc bản đồ"
+
+msgid "MAPCOLORMNU_DEFAULTMAPCOLORS"
+msgstr "Khôi phục màu sắc tùy chỉnh mặc định"
+
+msgid "OPTVAL_8000HZ"
+msgstr ""
+
+msgid "OPTVAL_11025HZ"
+msgstr ""
+
+msgid "OPTVAL_22050HZ"
+msgstr ""
+
+msgid "OPTVAL_32000HZ"
+msgstr ""
+
+msgid "OPTVAL_44100HZ"
+msgstr ""
+
+msgid "OPTVAL_48000HZ"
+msgstr ""
+
+msgid "OPTVAL_64SAMPLES"
+msgstr "64 mẫu"
+
+msgid "OPTVAL_128SAMPLES"
+msgstr "128 mẫu"
+
+msgid "OPTVAL_256SAMPLES"
+msgstr "256 mẫu"
+
+msgid "OPTVAL_512SAMPLES"
+msgstr "512 mẫu"
+
+msgid "OPTVAL_1024SAMPLES"
+msgstr "1024 mẫu"
+
+msgid "OPTVAL_2048SAMPLES"
+msgstr "2048 mẫu"
+
+msgid "OPTVAL_4096SAMPLES"
+msgstr "4096 mẫu"
+
+msgid "OPTSTR_AUTO"
+msgstr "Tự động"
+
+msgid "OPTSTR_MONO"
+msgstr ""
+
+msgid "OPTSTR_STEREO"
+msgstr ""
+
+msgid "OPTSTR_PROLOGIC"
+msgstr ""
+
+msgid "OPTSTR_QUAD"
+msgstr ""
+
+msgid "OPTSTR_SURROUND"
+msgstr "5 loa"
+
+msgid "OPTSTR_5POINT1"
+msgstr "5.1 loa"
+
+msgid "OPTSTR_7POINT1"
+msgstr "7.1 loa"
+
+msgid "OPENALMNU_PLAYBACKDEVICE"
+msgstr "Thiết bị phát lại"
+
+msgid "OPENALMNU_ENABLEEFX"
+msgstr "Bật EFX"
+
+msgid "OPENALMNU_RESAMPLER"
+msgstr "Bộ lấy mẫu lại"
+
+msgid "SNDMNU_SFXVOLUME"
+msgstr "Âm lượng"
+
+msgid "SNDMNU_MENUVOLUME"
+msgstr "Âm lượng menu"
+
+msgid "SNDMNU_MUSICVOLUME"
+msgstr "Âm lượng nhạc"
+
+msgid "SNDMNU_MIDIDEVICE"
+msgstr "Thiết bị MIDI"
+
+msgid "SNDMNU_BACKGROUND"
+msgstr "Âm thanh nền"
+
+msgid "SNDMNU_UNDERWATERREVERB"
+msgstr "Tiếng vang dưới nước"
+
+msgid "SNDMNU_RANDOMIZEPITCHES"
+msgstr "Ngẫu nhiên hóa các nốt nhạc"
+
+msgid "SNDMNU_CHANNELS"
+msgstr "Kênh âm thanh"
+
+msgid "SNDMNU_OPENAL"
+msgstr "Các tùy chọn OpenAL"
+
+msgid "SNDMNU_RESTART"
+msgstr "Khởi động lại âm thanh"
+
+msgid "SNDMNU_ADVANCED"
+msgstr "Tùy chọn nâng cao"
+
+msgid "SNDMNU_MODREPLAYER"
+msgstr "Tùy chọn người chơi lại mô-đun"
+
+msgid "SNDMNU_MIDIPLAYER"
+msgstr "Tùy chọn thiết bị MIDI"
+
+msgid "ADVSNDMNU_TITLE"
+msgstr "Tùy chọn âm thanh nâng cao"
+
+msgid "ADVSNDMNU_SAMPLERATE"
+msgstr "Tốc độ lấy mẫu"
+
+msgid "ADVSNDMNU_HRTF"
+msgstr ""
+
+msgid "ADVSNDMNU_OPLSYNTHESIS"
+msgstr ""
+
+msgid "ADVSNDMNU_OPLNUMCHIPS"
+msgstr "Số lượng chip OPL được mô phỏng"
+
+msgid "ADVSNDMNU_OPLGAIN"
+msgstr ""
+
+msgid "ADVSNDMNU_OPLFULLPAN"
+msgstr "Điều chỉnh âm thanh nổi MIDI đầy đủ"
+
+msgid "ADVSNDMNU_OPLCORES"
+msgstr ""
+
+msgid "ADVSNDMNU_MIDIVOICES"
+msgstr "Giọng nói MIDI"
+
+msgid "ADVSNDMNU_FLUIDSYNTH"
+msgstr ""
+
+msgid "ADVSNDMNU_GLOBAL"
+msgstr "Toàn cầu"
+
+msgid "ADVSNDMNU_FREEVERB"
+msgstr "Động từ tự do"
+
+msgid "ADVSNDMNU_GLOBAL_FREEVERB"
+msgstr "Động từ tự do toàn cầu"
+
+msgid "ADVSNDMNU_FLUIDGAIN"
+msgstr ""
+
+msgid "ADVSNDMNU_REVERB"
+msgstr "Tiếng vang"
+
+msgid "ADVSNDMNU_REVERB_LEVEL"
+msgstr "Mức độ tiếng vang"
+
+msgid "ADVSNDMNU_CHORUS"
+msgstr "Điệp khúc"
+
+msgid "ADVSNDMNU_TIMIDITY"
+msgstr ""
+
+msgid "ADVSNDMNU_ADLMIDI"
+msgstr ""
+
+msgid "ADVSNDMNU_OPNMIDI"
+msgstr ""
+
+msgid "ADVSNDMNU_WILDMIDI"
+msgstr ""
+
+msgid "ADVSNDMNU_SELCONFIG"
+msgstr "Chọn cấu hình"
+
+msgid "ADVSNDMNU_ADVRESAMPLING"
+msgstr "Lấy mẫu lại nâng cao"
+
+msgid "ADVSNDMNU_OPLBANK"
+msgstr "Ngân hàng OPL"
+
+msgid "ADVSNDMNU_RUNPCMRATE"
+msgstr "Chạy trình giả lập ở tốc độ PCM"
+
+msgid "ADVSNDMNU_ADLNUMCHIPS"
+msgstr "Số lượng chip OPL mô phỏng"
+
+msgid "ADVSNDMNU_ADLGAIN"
+msgstr ""
+
+msgid "ADVSNDMNU_VLMODEL"
+msgstr "Mô hình thể tích"
+
+msgid "ADVSNDMNU_CHANALLOC"
+msgstr "Phương pháp phân bổ kênh"
+
+msgid "ADVSNDMNU_AUTOARPEGGIO"
+msgstr "Hợp âm rải tự động"
+
+msgid "ADVSNDMNU_OPNCORES"
+msgstr ""
+
+msgid "ADVSNDMNU_GUSEMULATION"
+msgstr ""
+
+msgid "ADVSNDMNU_DMXGUS"
+msgstr "Đọc DMXGUS cục u"
+
+msgid "ADVSNDMNU_GUSMEMSIZE"
+msgstr "Kích thước bộ nhớ GUS"
+
+msgid "ADVSNDMNU_OPNNUMCHIPS"
+msgstr "Số lượng chip OPN mô phỏng"
+
+msgid "ADVSNDMNU_OPNGAIN"
+msgstr ""
+
+msgid "ADVSNDMNU_ADLCUSTOMBANK"
+msgstr "Sử dụng ngân hàng WOPL tùy chỉnh"
+
+msgid "ADVSNDMNU_ADLUSEWADBANK"
+msgstr "Sử dụng ngân hàng GENMIDI của WAD làm ngân hàng tùy chỉnh"
+
+msgid "ADVSNDMNU_OPLBANKFILE"
+msgstr "Tệp tin ngân hàng WOPL"
+
+msgid "ADVSNDMNU_OPNCUSTOMBANK"
+msgstr "Sử dụng ngân hàng WOPN tùy chỉnh"
+
+msgid "ADVSNDMNU_OPNBANKFILE"
+msgstr "Tệp tin ngân hàng WOPN"
+
+msgid "OPTVAL_ALIASING"
+msgstr ""
+
+msgid "OPTVAL_LINEAR_1"
+msgstr "Tuyến tính"
+
+msgid "OPTVAL_LINEAR_2"
+msgstr "Tuyến tính"
+
+msgid "OPTVAL_LINEAR_3"
+msgstr "Tuyến tính"
+
+msgid "OPTVAL_NEAREST"
+msgstr "Gần nhất"
+
+msgid "OPTVAL_PCF_LOW"
+msgstr "PCF (Thấp)"
+
+msgid "OPTVAL_PCF_MEDIUM"
+msgstr "PCF (Trung bình)"
+
+msgid "OPTVAL_PCF_HIGH"
+msgstr "PCF (Cao)"
+
+msgid "OPTVAL_CUBIC"
+msgstr ""
+
+msgid "OPTVAL_BLEP"
+msgstr "Bước giới hạn băng thông"
+
+msgid "OPTVAL_LINEARSLOW"
+msgstr "Tuyến tính (Chậm hơn)"
+
+msgid "OPTVAL_BLAM"
+msgstr "Tuyến tính giới hạn băng tần"
+
+msgid "OPTVAL_CUBICSLOW"
+msgstr "Cubic (Chậm hơn)"
+
+msgid "OPTVAL_SINC"
+msgstr ""
+
+msgid "OPTVAL_NOTEONOFFONLY"
+msgstr "Lưu ý chỉ bật/tắt"
+
+msgid "OPTVAL_FULLRAMPING"
+msgstr "Tăng tốc hoàn toàn"
+
+msgid "MODMNU_MASTERVOLUME"
+msgstr "Âm lượng chính"
+
+msgid "MODMNU_QUALITY"
+msgstr "Chất lượng"
+
+msgid "MODMNU_VOLUMERAMPING"
+msgstr "Tăng âm lượng"
+
+msgid "OPTVAL_LIBXMP"
+msgstr ""
+
+msgid "OPTVAL_DUMB"
+msgstr ""
+
+msgid "MODMNU_CHIPOMATIC"
+msgstr ""
+
+msgid "OPTVAL_MAMEOPL2"
+msgstr ""
+
+msgid "OPTVAL_DOSBOXOPL3"
+msgstr ""
+
+msgid "OPTVAL_JAVAOPL3"
+msgstr ""
+
+msgid "OPTVAL_ESFMU"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPL2"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPL3"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPL3"
+msgstr ""
+
+msgid "OPTVAL_LLENUKEDOPL2"
+msgstr "OPL2-LLE (hiệu suất chuyên sâu)"
+
+msgid "OPTVAL_LLENUKEDOPL3"
+msgstr "OPL3-LLE (hiệu suất chuyên sâu)"
+
+msgid "OPTVAL_MAMEOPN2"
+msgstr ""
+
+msgid "OPTVAL_NP2OPNA"
+msgstr ""
+
+msgid "OPTVAL_MAMEOPNA"
+msgstr ""
+
+msgid "OPTVAL_OPALOPL3"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPN2YM3438"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPN2YM2612"
+msgstr ""
+
+msgid "OPTVAL_OPN2YM2612LLE"
+msgstr "OPN2-LLE (YM2612) (hiệu suất chuyên sâu)"
+
+msgid "OPTVAL_OPN2YM3438LLE"
+msgstr "OPN2-LLE (YM3438) (hiệu suất chuyên sâu)"
+
+msgid "OPTVAL_OPN2YMF276LLE"
+msgstr "OPN2-LLE (YMF276) (hiệu suất chuyên sâu)"
+
+msgid "OPTVAL_GENSOPN2"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPN2"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPNA"
+msgstr ""
+
+msgid "ADLVLMODEL_AUTO"
+msgstr "Tự động (Sử dụng cài đặt của ngân hàng)"
+
+msgid "OPNVLMODEL_AUTO"
+msgstr "Tự động (Sử dụng cài đặt của ngân hàng)"
+
+msgid "ADLVLMODEL_GENERIC"
+msgstr "Chung"
+
+msgid "OPNVLMODEL_GENERIC"
+msgstr "Chung"
+
+msgid "ADLVLMODEL_NATIVE"
+msgstr ""
+
+msgid "OPNVLMODEL_NATIVE"
+msgstr ""
+
+msgid "ADLVLMODEL_DMX"
+msgstr ""
+
+msgid "OPNVLMODEL_DMX"
+msgstr "Giống như trong DMX"
+
+msgid "ADLVLMODEL_APOGEE"
+msgstr ""
+
+msgid "OPNVLMODEL_APOGEE"
+msgstr "Giống như trong Apogee Sound System"
+
+msgid "OPNVLMODEL_WIN9X"
+msgstr ""
+
+msgid "ADLVLMODEL_WIN9X"
+msgstr ""
+
+msgid "ADLVLMODEL_WIN9XGENERIC"
+msgstr ""
+
+msgid "ADLVLMODEL_DMX_FIXED"
+msgstr ""
+
+msgid "ADLVLMODEL_APOGEE_FIXED"
+msgstr ""
+
+msgid "ADLVLMODEL_AIL"
+msgstr ""
+
+msgid "ADLVLMODEL_HMI"
+msgstr ""
+
+msgid "ADLVLMODEL_HMIOLD"
+msgstr ""
+
+msgid "ADLCHANALLOC_AUTO"
+msgstr "Tự động"
+
+msgid "ADLCHANALLOC_OFFDELAY"
+msgstr "Độ trễ tắt âm thanh được đo"
+
+msgid "ADLCHANALLOC_SAMEINST"
+msgstr "Tái sử dụng phiên bản đầu tiên của cùng một nhạc cụ"
+
+msgid "ADLCHANALLOC_ANYREL"
+msgstr "Tái sử dụng bất kỳ ghi chú nào được phát hành lần đầu"
+
+msgid "OPTVAL_UNLIMITED"
+msgstr "Không giới hạn"
+
+msgid "OPTVAL_256K"
+msgstr ""
+
+msgid "OPTVAL_512K"
+msgstr ""
+
+msgid "OPTVAL_768K"
+msgstr ""
+
+msgid "OPTVAL_1024K"
+msgstr ""
+
+msgid "OPTVAL_UNCHARTED2"
+msgstr ""
+
+msgid "OPTVAL_HEJLDAWSON"
+msgstr ""
+
+msgid "OPTVAL_REINHARD"
+msgstr ""
+
+msgid "OPTVAL_PALETTE"
+msgstr "Bảng màu"
+
+msgid "OPTVAL_LOW"
+msgstr "Thấp"
+
+msgid "OPTVAL_MEDIUM"
+msgstr "Trung bình"
+
+msgid "OPTVAL_HIGH"
+msgstr "Cao"
+
+msgid "OPTVAL_EXTREME"
+msgstr "Vô cùng"
+
+msgid "OPTVAL_OBVERSEFIRST"
+msgstr ""
+
+msgid "OPTVAL_REVERSEFIRST"
+msgstr "Đảo ngược"
+
+msgid "GLMNU_POSTPROCESS"
+msgstr "Xử lý hậu kỳ"
+
+msgid "GLPREFMNU_TONEMAP"
+msgstr "Chế độ Tonemap"
+
+msgid "GLPREFMNU_LENS"
+msgstr "Hiệu ứng méo ống kính"
+
+msgid "GLPREFMNU_FXAA"
+msgstr "Chất lượng FXAA"
+
+msgid "GLPREFMNU_DITHER"
+msgstr "Dither đầu ra"
+
+msgid "GLPREFMNU_PALTONEMAPORDER"
+msgstr "Thứ tự bảng màu Tonemap"
+
+msgid "GLPREFMNU_PALTONEMAPPOWER"
+msgstr "Số mũ bảng màu Tonemap"
+
+msgid "GLPREFMNU_MULTISAMPLE"
+msgstr "Lấy đa mẫu"
+
+msgid "GLPREFMNU_BLOOM"
+msgstr "Bloom hiệu ứng"
+
+msgid "GLPREFMNU_SSAO"
+msgstr "Chất lượng che khuất môi trường"
+
+msgid "GLPREFMNU_SSAO_PORTALS"
+msgstr "Cổng thông tin có AO"
+
+msgid "GLPREFMNU_MENUBLUR"
+msgstr ""
+
+msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
+msgstr "Bản đồ môi trường trên gương"
+
+msgid "GLPREFMNU_RENDERQUALITY"
+msgstr "Chất lượng kết xuất"
+
+msgid "OPTVAL_SPEED"
+msgstr "Tốc độ"
+
+msgid "OPTVAL_QUALITY"
+msgstr "Chất lượng"
+
+msgid "GLPREFMNU_SECLIGHTMODE"
+msgstr "Chế độ đèn sector"
+
+msgid "GLPREFMNU_FOGMODE"
+msgstr "Chế độ sương mù"
+
+msgid "OPTVAL_RADIAL"
+msgstr ""
+
+msgid "OPTVAL_STANDARD"
+msgstr "Tiêu chuẩn"
+
+msgid "GLTEXMNU_TEXFILTER"
+msgstr "Chế độ bộ lọc kết cấu"
+
+msgid "GLTEXMNU_ANISOTROPIC"
+msgstr "Bộ lọc dị hướng"
+
+msgid "OPTVAL_NONENEARESTMIPMAP"
+msgstr "Không có (mipmap gần nhất)"
+
+msgid "OPTVAL_NONELINEARMIPMAP"
+msgstr "Không có (mipmap tuyến tính)"
+
+msgid "OPTVAL_NONETRILINEAR"
+msgstr "Không có (ba tuyến tính)"
+
+msgid "OPTVAL_BILINEAR"
+msgstr "Song tuyến"
+
+msgid "OPTVAL_TRILINEAR"
+msgstr "Tam tuyến"
+
+msgid "OPTVAL_2X"
+msgstr ""
+
+msgid "OPTVAL_4X"
+msgstr ""
+
+msgid "OPTVAL_8X"
+msgstr ""
+
+msgid "OPTVAL_16X"
+msgstr ""
+
+msgid "OPTVAL_32X"
+msgstr ""
+
+msgid "GLTEXMNU_TITLE"
+msgstr "Tùy chọn kết cấu"
+
+msgid "GLTEXMNU_HQRESIZE"
+msgstr "Chế độ thay đổi kích thước chất lượng cao"
+
+msgid "GLTEXMNU_HQRESIZEMULT"
+msgstr "Hệ số nhân thay đổi kích thước chất lượng cao"
+
+msgid "GLTEXMNU_HQRESIZEWARN"
+msgstr "Chế độ này yêu cầu bộ nhớ video nhiều hơn %d lần"
+
+msgid "GLTEXMNU_RESIZETEX"
+msgstr "Thay đổi kích thước kết cấu"
+
+msgid "GLTEXMNU_RESIZESPR"
+msgstr "Thay đổi kích thước sprite"
+
+msgid "GLTEXMNU_RESIZEFNT"
+msgstr "Thay đổi kích thước phông chữ"
+
+msgid "GLTEXMNU_RESIZESKN"
+msgstr "Thay đổi kích thước mô hình da"
+
+msgid "GLTEXMNU_PRECACHETEX"
+msgstr "Bộ nhớ đệm trước GL textures"
+
+msgid "VIDMNU_TITLE"
+msgstr "Chế độ video"
+
+msgid "OPTVAL_LETTERBOX"
+msgstr ""
+
+msgid "OPTVAL_STRETCH"
+msgstr "Duỗi"
+
+msgid "VIDMNU_RENDERMODE"
+msgstr "Chế độ kết xuất"
+
+msgid "VIDMNU_FULLSCREEN"
+msgstr "Toàn màn hình"
+
+msgid "VIDMNU_HIDPI"
+msgstr "Retina/HiDPI ủng hộ"
+
+msgid "VIDMNU_FORCEASPECT"
+msgstr "Tỷ lệ khung hình lực"
+
+msgid "VIDMNU_CROPASPECT"
+msgstr "Kiểu tỷ lệ bắt buộc"
+
+msgid "VIDMNU_SCALEMODE"
+msgstr "Thang độ phân giải"
+
+msgid "VIDMNU_SCALEFACTOR"
+msgstr "Yếu tố quy mô"
+
+msgid "VIDMNU_USELINEAR"
+msgstr "Sử dụng tỷ lệ tuyến tính (Toàn màn hình)"
+
+msgid "VIDMNU_CUSTOMRES"
+msgstr "Chia tỷ lệ pixel tùy chỉnh"
+
+msgid "VIDMNU_CUSTOMX"
+msgstr "Chiều rộng tùy chỉnh"
+
+msgid "VIDMNU_CUSTOMY"
+msgstr "Chiều cao tùy chỉnh"
+
+msgid "VIDMNU_APPLYW"
+msgstr "Áp dụng thay đổi (trong cửa sổ)"
+
+msgid "VIDMNU_APPLYFS"
+msgstr "Áp dụng thay đổi (Toàn màn hình)"
+
+msgid "VIDMNU_RESPRESET"
+msgstr "Chọn cài đặt trước độ phân giải"
+
+msgid "VIDMNU_RESPRESETTTL"
+msgstr "Các thiết lập độ phân giải tùy chỉnh"
+
+msgid "VIDMNU_RESPRESETHEAD"
+msgstr "Chế độ độ phân giải cài đặt sẵn"
+
+msgid "VIDMNU_ASPECT43"
+msgstr "Tỷ lệ 4:3"
+
+msgid "VIDMNU_ASPECT54"
+msgstr "Tỷ lệ 5:4"
+
+msgid "VIDMNU_ASPECT169"
+msgstr "Tỷ lệ 16:9"
+
+msgid "VIDMNU_ASPECT1610"
+msgstr "Tỷ lệ 16:10"
+
+msgid "VIDMNU_ASPECT219"
+msgstr "Tỷ lệ 21:9"
+
+msgid "OPTVAL_NORMAL"
+msgstr "Bình thường"
+
+msgid "OPTVAL_LOWEST"
+msgstr "Quy mô thấp nhất có thể"
+
+msgid "OPTVAL_CUSTOM"
+msgstr "Phong tục"
+
+msgid "VIDMNU_MAXFPS"
+msgstr "FPS tối đa"
+
+msgid "OPTVAL_60FPS"
+msgstr ""
+
+msgid "OPTVAL_75FPS"
+msgstr ""
+
+msgid "OPTVAL_90FPS"
+msgstr ""
+
+msgid "OPTVAL_120FPS"
+msgstr ""
+
+msgid "OPTVAL_144FPS"
+msgstr ""
+
+msgid "OPTVAL_200FPS"
+msgstr ""
+
+msgid "VIDMNU_PREFERBACKEND"
+msgstr "Kết xuất ưu tiên"
+
+msgid "OPTVAL_OPENGL"
+msgstr "OpenGL"
+
+msgid "OPTVAL_VULKAN"
+msgstr "Vulkan"
+
+msgid "OPTVAL_OPENGLES"
+msgstr ""
+
+msgid "MISCMNU_MERGEKEYS"
+msgstr "Kết hợp phím Alt/Ctrl/Shift trái và phải"
+
+msgid "MISCMNU_WINFULLSCREENTOGGLE"
+msgstr "Alt-Enter bật/tắt chế độ toàn màn hình"
+
+msgid "MISCMNU_MACFULLSCREENTOGGLE"
+msgstr "Lệnh-F bật/tắt chế độ toàn màn hình"
+
+msgid "MISCMNU_ENABLEAUTOSAVES"
+msgstr "Bật tính năng tự động lưu"
+
+msgid "MISCMNU_AUTOSAVECOUNT"
+msgstr "Số lần tự động lưu"
+
+msgid "MISCMNU_SAVELOADCONFIRMATION"
+msgstr "Xác nhận lưu/vào"
+
+msgid "MISCMNU_NOCHEATS"
+msgstr "Vô hiệu hóa ăn gian bàn phím"
+
+msgid "MISCMNU_QUICKSAVEROTATION"
+msgstr "Lưu nhanh xoay"
+
+msgid "MISCMNU_QUICKSAVECOUNT"
+msgstr "Số lần lưu nhanh trong vòng xoay"
+
+msgid "MISCMNU_CLEANMENU"
+msgstr "Tỷ lệ thu phóng menu ZDoom cổ điển"
+
+msgid "MISCMNU_PAUSEINBACKGROUND"
+msgstr "Tạm dừng trò chơi ở chế độ nền"
+
+msgid "HUDMNU_CROSSHAIR"
+msgstr "Tâm ngắm mặc định"
+
+msgid "HUDMNU_CROSSHAIRCOLOR"
+msgstr "Màu tâm ngắm"
+
+msgid "HUDMNU_CROSSHAIRSCALE"
+msgstr "Tâm ngắm tỷ lệ"
+
+msgid "OPTVAL_YES_STANDARD"
+msgstr "Tiêu chuẩn"
+
+msgid "OPTVAL_YES_ENHANCED"
+msgstr "Nâng cao"
+
+msgid "OPTMNU_LANGUAGE"
+msgstr "Ngôn ngữ"
+
+msgid "TXT_UNDOCHANGES"
+msgstr "Hoàn tác thay đổi"
+
+msgid "REVMNU_SELECT"
+msgstr "Chọn môi trường"
+
+msgid "REVMNU_TEST"
+msgstr "Môi trường thử nghiệm"
+
+msgid "REVMNU_EDIT"
+msgstr "Chỉnh sửa môi trường"
+
+msgid "REVMNU_NEW"
+msgstr "Môi trường mới"
+
+msgid "REVMNU_REFLECTIONS_SCALE"
+msgstr "Thang đo Suy ngẫm"
+
+msgid "REVMNU_REFLECTIONS_DELAY_SCALE"
+msgstr "Thang đo Độ trễ Phản xạ"
+
+msgid "REVMNU_DECAY_TIME_SCALE"
+msgstr "Thang thời gian phân rã"
+
+msgid "REVMNU_DECAY_HF_LIMIT"
+msgstr "Giới hạn HF của sự phân rã"
+
+msgid "REVMNU_REVERB_SCALE"
+msgstr "Thang đo độ vang"
+
+msgid "REVMNU_REVERB_DELAY_SCALE"
+msgstr "Thang đo Reverb Delay"
+
+msgid "REVMNU_ECHO_TIME_SCALE"
+msgstr "Thang thời gian tiếng vang"
+
+msgid "REVMNU_MODULATION_TIME_SCALE"
+msgstr "Thang thời gian điều biến"
+
+msgid "REVMNU_BASED_ON"
+msgstr "Dựa trên"
+
+msgid "REVMNU_NAME"
+msgstr "Tên"
+
+msgid "REVMNU_ID_1"
+msgstr ""
+
+msgid "REVMNU_ID_2"
+msgstr ""
+
+msgid "REVMNU_CREATE"
+msgstr "Tạo"
+
+msgid "REVMNU_SAVE"
+msgstr "Lưu…"
+
+msgid "REVMNU_FILE_NAME"
+msgstr "Tên tệp"
+
+msgid "REVMNU_ENVIRONMENTS_TO_SAVE"
+msgstr "Môi trường để lưu"
+
+msgid "DSPLYMNU_VKOPT"
+msgstr "Vulkan Tùy chọn (Thử nghiệm)"
+
+msgid "VK_TITLE"
+msgstr "Vulkan Tùy chọn"
+
+msgid "VKMNU_DEVICE"
+msgstr "Vulkan Thiết bị ID"
+
+msgid "VKMNU_HDR"
+msgstr "Dải động cao"
+
+msgid "VK_WARNING"
+msgstr "Cảnh báo: Trình kết xuất Vulkan vẫn đang trong giai đoạn thử nghiệm!"
+
+msgid "VK_RESTART"
+msgstr "Các tùy chọn này sẽ yêu cầu khởi động lại để có hiệu lực."
+
+msgid "OPTVAL_SCALENX"
+msgstr ""
+
+msgid "OPTVAL_NORMALNX"
+msgstr ""
+
+msgid "OPTVAL_HQNX"
+msgstr ""
+
+msgid "OPTVAL_HQNXMMX"
+msgstr ""
+
+msgid "OPTVAL_NXBRZ"
+msgstr ""
+
+msgid "OPTVAL_OLD_NXBRZ"
+msgstr ""
+
+msgid "OS_TITLE"
+msgstr "Tìm kiếm tùy chọn"
+
+msgid "OS_ANY"
+msgstr "Tìm kiếm bất kỳ thuật ngữ nào"
+
+msgid "OS_ALL"
+msgstr "Tìm kiếm tất cả các thuật ngữ"
+
+msgid "OS_NO_RESULTS"
+msgstr "Không tìm thấy kết quả nào."
+
+msgid "OS_LABEL"
+msgstr "Tìm kiếm:"
+
+msgid "OPTMNU_FULLOPTIONS"
+msgstr "Menu tùy chọn đầy đủ"
+
+msgid "OPTMNU_SIMPLEON"
+msgstr "Menu tùy chọn đơn giản"
+
+msgid "OPTMNU_OPENCONFIG"
+msgstr "Duyệt cấu hình trò chơi"
+
+msgid "OPTMNU_OPENSCREENSHOTS"
+msgstr "Duyệt ảnh chụp màn hình"
+
+msgid "OPTMNU_OPENSAVES"
+msgstr "Duyệt các trò chơi đã lưu"
+
+msgid "MOUSEMNU_SWAPBUTTONS"
+msgstr "Hoán đổi nút chuột"
+
+msgid "OPTVAL_ONLYMODIFIED"
+msgstr "Chỉ sửa đổi"
+
+msgid "TXT_UNKNOWN"
+msgstr "Không xác định"
+
+msgid "TXT_SAVEGAMENEEDS"
+msgstr "Tệp lưu trò chơi này cần các tệp sau"
+
+msgid "GLPREFMNU_CORONAS"
+msgstr ""
+
+msgid "PICKER_SELECT"
+msgstr "Chọn tệp trò chơi để chạy."
+
+msgid "PICKER_PLAY"
+msgstr "Bắt đầu game"
+
+msgid "PICKER_EXIT"
+msgstr "Thoát"
+
+msgid "PICKER_GENERAL"
+msgstr "Chung"
+
+msgid "PICKER_EXTRA"
+msgstr "Đồ họa bổ sung"
+
+msgid "PICKER_NOAUTOLOAD"
+msgstr "Vô hiệu hóa tự động vào"
+
+msgid "PICKER_DONTASK"
+msgstr "Đừng hỏi tôi lần nữa"
+
+msgid "PICKER_LIGHTS"
+msgstr "Sáng"
+
+msgid "PICKER_BRIGHTMAPS"
+msgstr "Bản đồ sáng"
+
+msgid "PICKER_WIDESCREEN"
+msgstr "Màn hình rộng"
+
+msgid "PICKER_ADDPARM"
+msgstr "Các tham số bổ sung:"
+
+msgid "PICKER_WELCOME"
+msgstr "Chào mừng đến với %s!"
+
+msgid "PICKER_VERSION"
+msgstr "Phiên bản %s"
+
+msgid "PICKER_PREFERBACKEND"
+msgstr "API kết xuất"
+
+msgid "PICKER_TAB_PLAY"
+msgstr "Trò chơi"
+
+msgid "JOYMNU_JOYENABLE"
+msgstr "Bật bộ điều khiển này"
+
+msgid "CNTRLMNU_OPEN_MAIN"
+msgstr "Mở menu chính"
+
+msgid "MODMNU_REPLAYER"
+msgstr "Module người chơi lại"
+
+msgid "JOYMNU_JOYENABLEINBACKGROUND"
+msgstr "Cho phép đầu vào của bộ điều khiển nền"
+
+msgid "MISCMNU_SAVEORDER"
+msgstr "Thứ tự sắp xếp lưu trò chơi"
+
+msgid "OPTVAL_ALPHABETICAL"
+msgstr ""
+
+msgid "OPTVAL_LASTSAVEDTIME"
+msgstr "Thời gian lưu lần cuối"
+
+msgid "PICKER_PLAYHOST"
+msgstr "Trò chơi máy chủ"
+
+msgid "PICKER_PLAYJOIN"
+msgstr "Tham gia trò chơi"
+
+msgid "PICKER_REMPARM"
+msgstr "Ghi nhớ tham số"
+
+msgid "PICKER_SUPPORTWADS"
+msgstr "Hỗ trợ vào WADs"
+
+msgid "PICKER_TAB_MULTI"
+msgstr "Nhiều người chơi"
+
+msgid "PICKER_LOADSAVE"
+msgstr "Vào tệp lưu:"
+
+msgid "PICKER_REMSAVE"
+msgstr "Ghi nhớ tệp đã lưu"
+
+msgid "PICKER_HOST"
+msgstr "Máy chủ"
+
+msgid "PICKER_JOIN"
+msgstr "Tham gia"
+
+msgid "PICKER_NETRATE"
+msgstr "Gói Ticrate:"
+
+msgid "PICKER_NETBACKUP"
+msgstr "Gửi các gói tin dự phòng"
+
+msgid "PICKER_GAMEMODE"
+msgstr "Chế độ chơi:"
+
+msgid "PICKER_COOP"
+msgstr ""
+
+msgid "PICKER_DM"
+msgstr "Tử chiến"
+
+msgid "PICKER_TDM"
+msgstr "Đấu Đội Tử Chiến"
+
+msgid "PICKER_TEAM"
+msgstr "Đội #:"
+
+msgid "PICKER_ALTDM"
+msgstr "Sử dụng luật Deathmatch thay thế"
+
+msgid "PICKER_PLAYERS"
+msgstr "Người chơi tối đa:"
+
+msgid "PICKER_PORT"
+msgstr "Cổng máy chủ:"
+
+msgid "PICKER_PLAYERHINT"
+msgstr "Tối đa 64"
+
+msgid "PICKER_PORTHINT"
+msgstr "Mặc định 5029"
+
+msgid "PICKER_TEAMHINT"
+msgstr "255 = Ngẫu nhiên"
+
+msgid "PICKER_IP"
+msgstr "IP máy chủ:"
+
+msgid "PICKER_TDMLABEL"
+msgstr "Đấu Đội:"
+
+msgid "TXT_SAYTEAM"
+msgstr "Nói (Đội):"
+
+msgid "MISCMNU_DISCORDRPC"
+msgstr "Sự hiện diện phong phú Discord"
+
+msgid "JOYMNU_TURNSPEED"
+msgstr "Tốc độ quay"
+
+msgid "JOYMNU_LOOKSPEED"
+msgstr "Tốc độ nhìn"
+
+msgid "JOYMNU_ANALOGSTRAFERUN"
+msgstr "Chạy né tránh tương tự"
+
+msgid "NOTES_FAIL"
+msgstr "Không thể phân tích ghi chú phát hành"
+
+msgid "NOTES_UNKNOWN"
+msgstr "Không xác định"
+
+msgid "NOTES_RELEASED"
+msgstr "%s phiên bản %s, phát hành ngày %s"
+
+msgid "NOTES_EMPTY"
+msgstr "Không có mô tả được cung cấp."
+
+msgid "NOTES_DETAILS"
+msgstr "Để biết thêm chi tiết, xem: %s"
+
+msgid "PICKER_SHOWTHIS"
+msgstr "Hiển thị trang này sau khi cập nhật"
+
+msgid "PICKER_SHOWNOTES"
+msgstr "Hiển thị ghi chú phát hành"
+
+msgid "PICKER_TAB_ABOUT"
+msgstr "Về"
+
+msgid "PICKER_TAB_RELEASE"
+msgstr "Ghi chú phát hành"
+
+msgid "MSGMNU_MESSAGEFADE"
+msgstr "Thời gian làm mờ tin nhắn"
+
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr "Kích thước môi trường"
+
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr "Khuếch tán môi trường"
+
+msgid "REVMNU_ROOM"
+msgstr "Phòng"
+
+msgid "REVMNU_ROOM_HF"
+msgstr "Phòng HF"
+
+msgid "REVMNU_ROOM_LF"
+msgstr "Phòng LF"
+
+msgid "REVMNU_DECAY_TIME"
+msgstr "Thời gian phân rã"
+
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr "Tỷ lệ HF suy giảm"
+
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr "Tỷ lệ LF suy giảm"
+
+msgid "REVMNU_REFLECTIONS"
+msgstr "Những suy ngẫm"
+
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr "Độ trễ phản xạ"
+
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr "Suy ngẫm Pan X"
+
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr "Suy ngẫm Pan Y"
+
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr "Suy ngẫm Pan Z"
+
+msgid "REVMNU_REVERB"
+msgstr "Âm vang"
+
+msgid "REVMNU_ECHO_TIME"
+msgstr "Tiếng vang thời gian"
+
+msgid "REVMNU_ECHO_DEPTH"
+msgstr "Độ sâu tiếng vang"
+
+msgid "REVMNU_MODULATION_TIME"
+msgstr "Thời gian điều chế"
+
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr "Độ sâu điều biến"
+
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr "Hấp thụ không khí HF"
+
+msgid "REVMNU_HF_REFERENCE"
+msgstr "Tham chiếu HF"
+
+msgid "REVMNU_LF_REFERENCE"
+msgstr "Tham chiếu LF"
+
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr "Hệ số rolloff suy giảm phòng"
+
+msgid "REVMNU_DIFFUSION"
+msgstr "Khuếch tán"
+
+msgid "REVMNU_DENSITY"
+msgstr "Density"

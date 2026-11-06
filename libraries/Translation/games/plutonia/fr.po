@@ -1,0 +1,189 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-07-10 09:01+0000\n"
+"Last-Translator: Tapwave <kolb.rodrigue@gmail.com>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/doom-engine-games/the-plutonia-experiment/fr/>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2026.7.1.dev0\n"
+
+msgid "TXT_PLUT_EP"
+msgstr "L'Expérience Plutonia"
+
+msgid "PHUSTR_1"
+msgstr "Level 1 : Congo"
+
+msgid "PHUSTR_2"
+msgstr "Level 2 : Puits des Ames"
+
+msgid "PHUSTR_3"
+msgstr "Level 3 : Aztèque"
+
+msgid "PHUSTR_4"
+msgstr "Level 4 : Enfermé"
+
+msgid "PHUSTR_5"
+msgstr "Level 5 : Ville Fantôme"
+
+msgid "PHUSTR_6"
+msgstr "Level 6 : Repaire du Baron"
+
+msgid "PHUSTR_7"
+msgstr "Level 7 : Pris de court"
+
+msgid "PHUSTR_8"
+msgstr "Level 8 : Royaume"
+
+msgid "PHUSTR_9"
+msgstr "Level 9 : Abattoir"
+
+msgid "PHUSTR_10"
+msgstr "Level 10 : Assaut"
+
+msgid "PHUSTR_11"
+msgstr "Level 11 : Traque"
+
+msgid "PHUSTR_12"
+msgstr "Level 12 : Vitesse"
+
+msgid "PHUSTR_13"
+msgstr "Level 13 : La Crypte"
+
+msgid "PHUSTR_14"
+msgstr "Level 14  : Genèse"
+
+msgid "PHUSTR_15"
+msgstr "Level 15 : Le Crépuscule"
+
+msgid "PHUSTR_16"
+msgstr "Level 16 : Le Présage"
+
+msgid "PHUSTR_17"
+msgstr "Level 17 : Installation"
+
+msgid "PHUSTR_18"
+msgstr "Level 18 : Neurosphère"
+
+msgid "PHUSTR_19"
+msgstr "Level 19 : NMI"
+
+msgid "PHUSTR_20"
+msgstr "Level 20 : Le Domaine de la Mort"
+
+msgid "PHUSTR_21"
+msgstr "Level 21 : Pourfendeur"
+
+msgid "PHUSTR_22"
+msgstr "Level 22 : Mission Impossible"
+
+msgid "PHUSTR_23"
+msgstr "Level 23 : Pierre Tombale"
+
+msgid "PHUSTR_24"
+msgstr "Level 24 : La Frontière Finale"
+
+msgid "PHUSTR_25"
+msgstr "Level 25 : Le Temple des Ténèbres"
+
+msgid "PHUSTR_26"
+msgstr "Level 26 : Bunker"
+
+msgid "PHUSTR_27"
+msgstr "Level 27 : Anti-Christ"
+
+msgid "PHUSTR_28"
+msgstr "Level 28 : Les Égouts"
+
+msgid "PHUSTR_29"
+msgstr "Level 29 : Odyssée de Bruits"
+
+msgid "PHUSTR_30"
+msgstr "Level 30 : La Porte des Enfers"
+
+msgid "PHUSTR_31"
+msgstr "Level 31 : Cyber-Antre"
+
+msgid "PHUSTR_32"
+msgstr "Level 32 : Go 2 It"
+
+msgid "P1TEXT"
+msgstr ""
+"Vous jubilez sur la carcasse brûlante\n"
+"du Gardien. Avec sa mort, vous avez\n"
+"arraché l'accélerateur des griffes\n"
+"fétides de l'enfer. Vous vous reposez\n"
+"et observez vos alentours.\n"
+"Mince ! Il était sensé y avoir au\n"
+"moins un prototype qui marche, \n"
+"mais vous ne le trouvez pas. Les démons \n"
+"l'on sûrement pris avec eux. \n"
+"\n"
+"Vous devez trouver le prototype, ou\n"
+"tous vos combats auront été vains.\n"
+"Continez à avancer, à vous battre, à tuer.\n"
+"Oh oui, à vivre, aussi."
+
+msgid "P2TEXT"
+msgstr ""
+"Même le labyrinthe mortel des\n"
+"arche-viles ne vous a pas arrêté,\n"
+"et vous obtenez le prototype\n"
+"d'accélérateur que vous parvenez à\n"
+"désactiver efficacement et pour toujours.\n"
+"\n"
+"Vous êtes doué pour ces choses là."
+
+msgid "P3TEXT"
+msgstr ""
+"Vous vous êtes frayé votre chemin à\n"
+"travers le cœur d'une ruche de\n"
+"diables. Il est temps pour une mission\n"
+"de recherche et destruction visant le\n"
+"Gardien du Portail, avec sa répugnante\n"
+"progéniture descendant par trombes \n"
+"sur la Terre. Oui, il est cruel. \n"
+"Mais vous savez qui est pire !\n"
+"\n"
+"Souriant malicieusement, vous vérifiez\n"
+"l'équipement et vous vous préparez à\n"
+"faire voir a ce fumier un petit enfer\n"
+"de votre propre création !"
+
+msgid "P4TEXT"
+msgstr ""
+"La face maléfique du Gardien du Portail\n"
+"s'éparpille aux alentours. Tandis que son\n"
+"corps en lambeaux vacille, un portail\n"
+"inverse se forme et aspire les éclats du\n"
+"dernier prototype d'accélerateur, sans\n"
+"parler des quelques démons restants.\n"
+"Vous avez gagné. L'enfer est retourné\n"
+"torturer les méchants morts au lieu\n"
+"des gentils bien vivants.\n"
+"Souvenez vous de dire a vos enfants de\n"
+"mettre un lance-roquette dans votre\n"
+"cercueil. Si vous allez en enfer,\n"
+"quand vous serez mort, vous en aurez\n"
+"besoin, pour un nettoyage définitif…"
+
+msgid "P5TEXT"
+msgstr ""
+"Vous avez trouvé le deuxième niveau\n"
+"le plus difficile que nous avons.\n"
+"J'espère que vous avez sauvegardé\n"
+"lors du précédent...\n"
+"Sinon, soyez prêt a mourir souvent.\n"
+"Pour les pros seulement."
+
+msgid "P6TEXT"
+msgstr ""
+"Alors, vous vous demandiez quel\n"
+"était le niveau le plus dur que nous\n"
+"avions préparé pour vous ? \n"
+"Maintenant, vous savez. \n"
+"Nul n'en sortira vivant."

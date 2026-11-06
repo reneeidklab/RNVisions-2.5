@@ -1,0 +1,188 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-09-04 19:51+0000\n"
+"Last-Translator: Tim Richter <jank21976@gmail.com>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/doom-engine-games/tnt-evilution/de/>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.9.1.dev0\n"
+
+msgid "TXT_TNT_EP"
+msgstr "TNT: Evilution"
+
+msgid "THUSTR_1"
+msgstr "Level 1: Systemkontrolle"
+
+msgid "THUSTR_2"
+msgstr "Level 2: Menschliches Grillfleisch"
+
+msgid "THUSTR_3"
+msgstr "Level 3: Energiekontrolle"
+
+msgid "THUSTR_4"
+msgstr "Level 4: Wurmloch"
+
+msgid "THUSTR_5"
+msgstr "Level 5: Hangar"
+
+msgid "THUSTR_6"
+msgstr "Level 6: Jagdsaison"
+
+msgid "THUSTR_7"
+msgstr "Level 7: Gefängnis"
+
+msgid "THUSTR_8"
+msgstr "Level 8: Metall"
+
+msgid "THUSTR_9"
+msgstr "Level 9: Festung"
+
+msgid "THUSTR_10"
+msgstr "Level 10: Erlösung"
+
+msgid "THUSTR_11"
+msgstr "Level 11: Lagerstätte"
+
+msgid "THUSTR_12"
+msgstr "Level 12: Krater"
+
+msgid "THUSTR_13"
+msgstr "Level 13: Nuklearverarbeitung"
+
+msgid "THUSTR_14"
+msgstr "Level 14: Stahlwerk"
+
+msgid "THUSTR_15"
+msgstr "Level 15: Todeszone"
+
+msgid "THUSTR_16"
+msgstr "Level 16: Abgrund"
+
+msgid "THUSTR_17"
+msgstr "Level 17: Verarbeitungsbereich"
+
+msgid "THUSTR_18"
+msgstr "Level 18: Mühle"
+
+msgid "THUSTR_19"
+msgstr "Level 19: Versand/widererscheinung"
+
+msgid "THUSTR_20"
+msgstr "Level 20: Zentralverarbeitung"
+
+msgid "THUSTR_21"
+msgstr "Level 21: Verwaltungszentrum"
+
+msgid "THUSTR_22"
+msgstr "Level 22: Habitat"
+
+msgid "THUSTR_23"
+msgstr "Level 23: Mondbergbauprojekt"
+
+msgid "THUSTR_24"
+msgstr "Level 24: Steinbruch"
+
+msgid "THUSTR_25"
+msgstr "Level 25: Bau des Barons"
+
+msgid "THUSTR_26"
+msgstr "Level 26: Ballistyx"
+
+msgid "THUSTR_27"
+msgstr "Level 27: Berg der Schmerzen"
+
+msgid "THUSTR_28"
+msgstr "Level 28: Zum Teufel"
+
+msgid "THUSTR_29"
+msgstr "Level 29: Fluss Styx"
+
+msgid "THUSTR_30"
+msgstr "Level 30: Letzter Ruf"
+
+msgid "THUSTR_31"
+msgstr "Level 31: Pharao"
+
+msgid "THUSTR_32"
+msgstr "Level 32: Karibik"
+
+msgid "T1TEXT"
+msgstr ""
+"Du hast dich aus den heimgesuchten Experi-\n"
+"mentier-Laboren herausgekämpft. Es sieht\n"
+"so aus, als ob die UAC es wieder mal ver-\n"
+"geigt hätte. Mit solchen Verlusten dürfte\n"
+"es inzwischen schwierig sein, überhaupt \n"
+"noch eine Versicherung zu erhalten...\n"
+"\n"
+"Vor dir liegt jetzt der militärische\n"
+"Komplex - jetzt heimgesucht von erkrankten\n"
+"Kreaturen, die nur darauf warten, dich zu\n"
+"zerreißen. Wenn du Glück hast, liegen hier\n"
+"vielleicht noch einige Kampfmittel herum."
+
+msgid "T2TEXT"
+msgstr ""
+"Du hörst das Mahlen schwerer Maschinen.\n"
+"Du hoffst, dass sie keine neue\n"
+"Höllenbrut produzieren. Aber du bist bereit\n"
+"die ganze Herde ausrotten, wenn nötig.\n"
+"Vielleicht planen sie ein Blutmahl aber\n"
+"du fühlst dich so stark wie zweitausend\n"
+"Wahnsinnige, zusammengepackt in einen verrückten Killer.\n"
+"\n"
+"So einfach kriegen die dich nicht runter."
+
+msgid "T3TEXT"
+msgstr ""
+"Der Blick voraus zeigt etwas sehr Vertrautes.\n"
+"Der Geruch kommt dir auch bekannt vor - riecht wie Frittierte\n"
+"Exkremente. Dieser Ort hat dir schon vorher\n"
+"nicht gefallen und du wirst deine Meinung\n"
+"auch sicher nicht ändern. Je mehr du darüber nachdenkst,\n"
+"desto wütender wirst du.\n"
+"Als du deine Waffe bereitmachst, überzieht ein\n"
+"böses Grinsen dein Gesicht.\n"
+"Zeit um aufzuräumen."
+
+msgid "T4TEXT"
+msgstr ""
+"Plötzlich ist alles still, von einem Horizont\n"
+"zum anderen. Das quälende Echo der Hölle\n"
+"verblasst, der Albtraumhimmel wird wieder\n"
+"blau, der Haufen Monsterleichen beginnt sich\n"
+"aufzulösen, zusammen mit dem ekligen\n"
+"Gestank, der in der Luft hing. Ja, du hast\n"
+"es geschafft. Aber hast du wirklich gewonnen?\n"
+"\n"
+"In der Ferne rumpelt etwas.\n"
+"Ein blaues Licht beginnt im Inneren\n"
+"des Schädels zu leuchten."
+
+msgid "T5TEXT"
+msgstr ""
+"Was jetzt? Dieser Ort sieht ganz anders aus. Fast\n"
+"wie der Palast von König Tut. Was auch immer hier ist, kann nicht\n"
+"schlimmer sein als das, was du bisher erlebt hast. Oder doch?\n"
+"Oder ist es doch vielleicht besser\n"
+"schlafende Götter ruhen zu lassen .."
+
+msgid "T6TEXT"
+msgstr ""
+"Zeit für einen Urlaub. Du hast die\n"
+"Eingeweide der Hölle platzen lassen und\n"
+"verdammt, du hast dir eine Pause verdient.\n"
+"Du murmelst zu dir selbst, vielleicht sollte\n"
+"das nächste Mal jemand anders\n"
+"der Hölle in den Arsch treten.\n"
+"Vor dir liegt eine ruhige Stadt\n"
+"mit friedlich fließendem Wasser, einfachen Gebäuden\n"
+"und hoffentlich keinen Höllenkreaturen.\n"
+"\n"
+"Als du den Transporter verlässt, hörst du\n"
+"das Stampfen eines Cyberdämonen."
